@@ -1,18 +1,23 @@
 # instagram-photo-crawler
-Download all pictures of someone's id
+It is still the most light-weighted Instagram Crawler, that can
+
+Download all pictures/videos of someone's id
 
 Get the pictures' url by getting json in python
+
+If you are only interested in downloading media, this will be your right choice.
 
 ### Prerequisite
 
 ```
-python3, requests, json, getpass
+python3, requests, json, getpass, bs4
 ```
 
 Install libraries:
 
 ```
 pip3 install requests
+pip3 install bs4
 ```
 
 ### Usage
@@ -28,8 +33,5 @@ Then insert data 'username', 'password', 'target_id'.
 
 
 Reference:
-https://www.youtube.com/watch?v=BJbKulrw7Ak
-
-https://github.com/lepus064/Get_Instagram_Photos
-
-https://medium.com/@h4t0n/instagram-data-scraping-550c5f2fb6f1
+https://github.com/huijay12/instagram-photo-crawler
+https://github.com/tomkdickinson/Instagram-Search-API-Python
