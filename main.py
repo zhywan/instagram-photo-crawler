@@ -364,9 +364,10 @@ def main():
     while has_next_page and success_query:
         handle_12_posts(data, origin_url, is_first)
         # continue to save log to file
-        for info in log_info:
-            log_file.write(info + '\n')
-        log_info = []
+        if keep_log:
+            for info in log_info:
+                log_file.write(info + '\n')
+            log_info = []
 
         # fetch the next page
         end_cursor = get_end_cursor(data, is_first)
@@ -398,10 +399,11 @@ def main():
                                                                           time_stamp2))
 
     # continue to save log to file
-    for info in log_info:
-        log_file.write(info + '\n')
-    log_info = []
-    log_file.close()
+    if keep_log:
+        for info in log_info:
+            log_file.write(info + '\n')
+        log_info = []
+        log_file.close()
 
     if sound_alert:
         # ringing a certain number of random sounds
